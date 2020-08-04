@@ -1,0 +1,7 @@
+name: Build a docker image based on a list of cache keys
+description: Build a docker image if a cache key changes, and set the docker image tag in a metadata for subsequent steps
+author: https://github.com/gusto
+requirements:
+  - md5
+  - docker
+public: false
