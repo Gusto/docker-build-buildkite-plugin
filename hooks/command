@@ -22,6 +22,4 @@ else
     docker push $image_with_tag
   fi
 fi
-command="buildkite-agent meta-data set $BUILDKITE_PLUGIN_DOCKER_BUILD_METADATA $image_with_tag"
-echo $commmand
-exec $commmand
+buildkite-agent meta-data set "$BUILDKITE_PLUGIN_DOCKER_BUILD_METADATA" "$image_with_tag""
