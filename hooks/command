@@ -20,6 +20,6 @@ else
     docker build -f ${BUILDKITE_PLUGIN_DOCKER_BUILD_DOCKER_FILE} -t $image_with_tag .
     echo "Pushing image..."
     docker push $image_with_tag
-    buildkite-agent metadata set $BUILDKITE_PLUGIN_DOCKER_BUILD_METADATA $image_with_tag
   fi
 fi
+buildkite-agent metadata set $BUILDKITE_PLUGIN_DOCKER_BUILD_METADATA $image_with_tag
