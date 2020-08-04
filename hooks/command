@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 signature=$(find $BUILDKITE_PLUGIN_DOCKER_BUILD_KEYS -type f  | sort | xargs md5sum | md5sum | cut -d ' ' -f 1)
-image_with_tag=${BUILDKITE_PLUGIN_DOCKER_BUILD_IMAGE_PREFIX}{$signature}
+image_with_tag=${BUILDKITE_PLUGIN_DOCKER_BUILD_IMAGE_PREFIX}${signature}
 echo "Preparing image: ${image_with_tag}"
 
 local_image=$(docker images --format '{{.Repository}}:{{.Tag}}' | grep $image_with_tag)
