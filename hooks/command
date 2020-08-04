@@ -22,4 +22,4 @@ else
     docker push $image_with_tag
   fi
 fi
-buildkite-agent metadata set $BUILDKITE_PLUGIN_DOCKER_BUILD_METADATA $image_with_tag
+buildkite-agent meta-data set $BUILDKITE_PLUGIN_DOCKER_BUILD_METADATA $image_with_tag
